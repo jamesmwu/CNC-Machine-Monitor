@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{2326BDA5-454B-4EFA-B8A3-6BEA407B5F4B}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataGrabber/DataGrabber.cs">
+    <Files>
+      <File FileName="DataGrabber/DataGrabber.cs" Line="12" Column="1" />
+      <File FileName="DataGrabber/Program.cs" Line="1" Column="1" />
+      <File FileName="DataGrabber/Database.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DataGrabber" expanded="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="DataGrabberApp" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.DataGrabberApp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>

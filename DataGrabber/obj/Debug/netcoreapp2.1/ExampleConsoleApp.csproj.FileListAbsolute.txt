@@ -1,0 +1,17 @@
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\ExampleConsoleApp.dll.config
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\ExampleConsoleApp.deps.json
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\ExampleConsoleApp.runtimeconfig.json
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\ExampleConsoleApp.runtimeconfig.dev.json
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\ExampleConsoleApp.dll
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\ExampleConsoleApp.pdb
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\MTConnectSharp.dll
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\bin\Debug\netcoreapp2.1\MTConnectSharp.pdb
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.csproj.AssemblyReference.cache
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.AssemblyInfoInputs.cache
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.AssemblyInfo.cs
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.csproj.CoreCompileInputs.cache
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.csproj.CopyComplete
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.dll
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.pdb
+C:\SWI\MTConnectSharp\MTConnectSharp-master\MTConnectSharp-master\TestConsoleApp\obj\Debug\netcoreapp2.1\ExampleConsoleApp.genruntimeconfig.cache
