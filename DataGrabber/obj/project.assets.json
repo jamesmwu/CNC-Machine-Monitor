@@ -29,6 +29,15 @@
           "lib/net6.0/MySqlConnector.dll": {}
         }
       },
+      "RestSharp/106.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
       "System.Configuration.ConfigurationManager/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -139,6 +148,19 @@
             "rid": "win"
           }
         }
+      },
+      "MTConnectSharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "RestSharp": "106.3.1"
+        },
+        "compile": {
+          "bin/placeholder/MTConnectSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MTConnectSharp.dll": {}
+        }
       }
     }
   },
@@ -199,6 +221,19 @@
         "logo.png",
         "mysqlconnector.2.1.9.nupkg.sha512",
         "mysqlconnector.nuspec"
+      ]
+    },
+    "RestSharp/106.3.1": {
+      "sha512": "TmlN7SXjK52zzpQDTuzw7IH3XQ2Svtss/4zvQBKIgf74QIVxvlxoAqQYu1EhNQ1bMSBIQ4aK120BO7W+v8/kiQ==",
+      "type": "package",
+      "path": "restsharp/106.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.dll",
+        "restsharp.106.3.1.nupkg.sha512",
+        "restsharp.nuspec"
       ]
     },
     "System.Configuration.ConfigurationManager/6.0.0": {
@@ -380,10 +415,16 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "MTConnectSharp/1.0.0": {
+      "type": "project",
+      "path": "../MTConnectSharp/MTConnectSharp.csproj",
+      "msbuildProject": "../MTConnectSharp/MTConnectSharp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "MTConnectSharp >= 1.0.0",
       "MySqlConnector >= 2.1.9",
       "System.Configuration.ConfigurationManager >= 6.0.0"
     ]
@@ -412,7 +453,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/jameswu/Desktop/CNCMachineMonitor/MTConnectSharp/MTConnectSharp.csproj": {
+              "projectPath": "/Users/jameswu/Desktop/CNCMachineMonitor/MTConnectSharp/MTConnectSharp.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -19,9 +19,8 @@ namespace DataGrabberApp
         {
 
             Start(args);
-            while (Console.ReadKey().Key != ConsoleKey.Escape)
-            {
-            }
+            while (Console.ReadKey().Key != ConsoleKey.Escape) ;
+       
 
             //  Console.ReadKey(true);
             Stop();
@@ -39,14 +38,7 @@ namespace DataGrabberApp
                 machine = listMachines[i];
                 Task task = Task.Factory.StartNew(() =>    
                 {
-                    if (protocol.Equals("mtconnect"))
-                    {
-                        new MTConnectDataGrabber(machine, UpdateInterval).Init();
-                    }
-                    else
-                    {
-                        new OPCUADataGrabber(machine, UpdateInterval).Init();
-                    }
+                    new MTConnectDataGrabber(machine, UpdateInterval).Init();
                   
                 });
                 collectorTasks.Add(machine.Url, task);
@@ -84,14 +76,8 @@ namespace DataGrabberApp
 
 
                 MachineInfo machine;
-                if (Protocol.Equals("mtconnect"))
-                {
-                    machine = new MachineInfo("http://" + IpAddress + ":" + port, Id, Protocol);
-                }
-                else
-                {
-                    machine = new MachineInfo("opc.tcp://" + IpAddress, Id, Protocol);
-                }
+                machine = new MachineInfo("http://" + IpAddress + ":" + port, Id, Protocol);
+                
                 machineInfoList.Add(machine);
             }
             Database.Close();

@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MySqlConnector;
-using System.Threading;
-using Opc.Ua;
-using Opc.Ua.Configuration;
-using System.IO;
-using System.Threading.Tasks;
+
 
 
 
@@ -162,123 +158,5 @@ namespace DataGrabberApp
             client.Probe();
         }
     }
-    class OPCUADataGrabber : DataGrabber
-    {
-        public OPCUADataGrabber(MachineInfo machine, TimeSpan interval) : base(machine, interval) { }
-        ~OPCUADataGrabber() 
-        {
-        
-        }
-        public override void Init() 
-        {
-            Console.WriteLine("OPCUADataGrabber Init.  Machine URL = " + Machine.Url);
-            Task task = ProbeAsync();
-        }
-
-        public async Task ProbeAsync()
-        {
-            
-            bool renewCertificate = false;
-            string password = null;
-            var applicationName = "UAClient";
-            var configSectionName = "UAClient";
-            int timeout = Timeout.Infinite;
-            bool autoAccept = false;
-            TextWriter output = Console.Out;
-            try
-            {
-                string lampStatusLast = "";
-                string lampStatusCurrent = "";
-                DeviceDatum stackLight = new StackLight();
-                Uri serverUrl = new Uri(Machine.Url);
-
-                CertificatePasswordProvider PasswordProvider = new CertificatePasswordProvider(password);
-                ApplicationInstance application = new ApplicationInstance
-                {
-                    ApplicationName = applicationName,
-                    ApplicationType = ApplicationType.Client,
-                    ConfigSectionName = configSectionName,
-                    CertificatePasswordProvider = PasswordProvider
-                };
-
-                // load the application configuration.
-                var config = await application.LoadApplicationConfiguration(silent: false);
-                // delete old certificate
-                if (renewCertificate)
-                {
-                    await application.DeleteApplicationInstanceCertificate().ConfigureAwait(false);
-                }
-                // check the application certificate.
-                bool haveAppCertificate = await application.CheckApplicationInstanceCertificate(false, minimumKeySize: 0).ConfigureAwait(false);
-                if (!haveAppCertificate)
-                {
-                    throw new Exception("Application instance certificate invalid!\n server Uri: " + Machine.Url);
-                }
-
-                // wait for timeout or Ctrl-C
-                var quitEvent = OPCUAClient.ConsoleUtils.CtrlCHandler();
-
-                // connect to a server until application stopped
-                bool quit = false;
-                DateTime start = DateTime.UtcNow;
-                int waitTime = int.MaxValue;
-
-                do
-                {
-                    if (timeout > 0)
-                    {
-                        waitTime = timeout - (int)DateTime.UtcNow.Subtract(start).TotalMilliseconds;
-                        if (waitTime <= 0)
-                        {
-                            break;
-                        }
-                    }
-                 
-                    // create the UA Client object and connect to configured server.
-                    using (OPCUAClient.UAClient uaClient = new OPCUAClient.UAClient(
-                        application.ApplicationConfiguration, output, ClientBase.ValidateResponse)
-                    {
-                        AutoAccept = autoAccept
-                    })
-                    {
-                        bool connected = await uaClient.ConnectAsync(serverUrl.ToString());
-                        if (connected)
-                        {
-                            // enable subscription transfer
-                            uaClient.Session.TransferSubscriptionsOnReconnect = true;
-
-                            // Run tests for available methods on reference server.
-                            var samples = new OPCUAClient.ClientSamples(output, ClientBase.ValidateResponse);
-                            var lampColor = samples.ReadNodes(uaClient.Session);
-                         
-                            lampStatusCurrent = lampColor;
-
-                            if (!lampStatusCurrent.Equals(lampStatusLast))
-                            {
-                                lampStatusLast = lampStatusCurrent;
-                                stackLight.PushData(Machine.Url, Machine.Id, "Stacklight", "stack_light_state", lampStatusCurrent, DateTime.Now);
-                            }
-                       
-                            // Wait for some DataChange notifications from MonitoredItems
-                            quit = quitEvent.WaitOne(timeout > 0 ? waitTime : 2000); 
-                            uaClient.Disconnect();
-                        }
-                        else
-                        {
-                            output.WriteLine("Could not connect to server! Retry in 10 seconds or Ctrl-C to quit.");
-                            quit = quitEvent.WaitOne(Math.Min(10_000, waitTime));
-                        }
-                        
-                    }
-
-                } while (!quit);
-
-                output.WriteLine("Client stopped.");
-            }
-            catch (Exception ex)
-            {
-                output.WriteLine(ex.Message);
-            }
-        }
-    }
+    
 }

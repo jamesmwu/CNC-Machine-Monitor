@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "wa99JVFq5m0c7Fy2c8d/Jcwokql3FKQFrjvi2T/BbocEaGgofihAzjRA2p+SozER4XlKyVjR8JtTekVKChpFdw==",
+  "success": true,
+  "projectFilePath": "/Users/jameswu/Desktop/CNCMachineMonitor/MTConnectSharp/MTConnectSharp.csproj",
+  "expectedPackageFiles": [
+    "/Users/jameswu/.nuget/packages/restsharp/106.3.1/restsharp.106.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}

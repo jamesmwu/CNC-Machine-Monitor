@@ -2,18 +2,16 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="DataGrabber/DataGrabber.cs">
     <Files>
-      <File FileName="DataGrabber/DataGrabber.cs" Line="12" Column="1" />
       <File FileName="DataGrabber/Program.cs" Line="1" Column="1" />
       <File FileName="DataGrabber/Database.cs" Line="1" Column="1" />
+      <File FileName="DataGrabber/DataGrabber.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DataGrabber" expanded="True">
             <Node name="Solution Items" expanded="True" />
-            <Node name="DataGrabberApp" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-            </Node>
+            <Node name="DataGrabberApp" expanded="True" />
           </Node>
         </State>
       </Pad>

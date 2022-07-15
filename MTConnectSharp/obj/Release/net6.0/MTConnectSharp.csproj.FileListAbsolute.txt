@@ -1,0 +1,12 @@
+F:\swi\TrakConnect\MTConnectSharp\bin\Release\net6.0\MTConnectSharp.deps.json
+F:\swi\TrakConnect\MTConnectSharp\bin\Release\net6.0\MTConnectSharp.dll
+F:\swi\TrakConnect\MTConnectSharp\bin\Release\net6.0\MTConnectSharp.pdb
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\MTConnectSharp.csproj.AssemblyReference.cache
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\MTConnectSharp.GeneratedMSBuildEditorConfig.editorconfig
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\MTConnectSharp.AssemblyInfoInputs.cache
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\MTConnectSharp.AssemblyInfo.cs
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\MTConnectSharp.csproj.CoreCompileInputs.cache
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\MTConnectSharp.dll
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\refint\MTConnectSharp.dll
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\MTConnectSharp.pdb
+F:\swi\TrakConnect\MTConnectSharp\obj\Release\net6.0\ref\MTConnectSharp.dll
