@@ -10,6 +10,7 @@ namespace DataGrabberApp
 {
     public enum DataType_t
     {
+        //Unsure how to edit these (7/16/22)
         eDTT_STACKLIGHT = 1,
         eDTT_SPINDLE_ON,
         eDTT_SPINDLE_RPM,
@@ -21,14 +22,14 @@ namespace DataGrabberApp
     {
         public string Url { get; set; }
         public int Id;
-        public string Protocol { get; set; }
+        public string Name { get; set; }
 
         public MachineInfo() { }
-        public MachineInfo(string address, int machineId, string protocol)
+        public MachineInfo(string address, int machineId, string name)
         {
             Url = address;
             Id = machineId;
-            Protocol = protocol;
+            Name = name;
         }
     }
     abstract class DeviceDatum
@@ -44,6 +45,8 @@ namespace DataGrabberApp
         public abstract void PushData( string url, int machineId, string name, string id, string value, DateTime time);
         public abstract bool IsChanged(DeviceDatum lastDatum);
     }
+
+    //Stacklight class necessary?
     class StackLight : DeviceDatum
     {
 

@@ -32,7 +32,7 @@ namespace DataGrabberApp
             Dictionary<string, Task> collectorTasks = new Dictionary<string, Task>();
             for (int i = 0; i < listMachines.Count; i++)
             {
-                var protocol = listMachines[i].Protocol;
+                //var protocol = listMachines[i].Protocol;
 
                 MachineInfo machine = new MachineInfo();
                 machine = listMachines[i];
@@ -52,7 +52,7 @@ namespace DataGrabberApp
 
      
             List<MachineInfo> machineInfoList = new List<MachineInfo>();
-            MySqlDataReader reader = Database.SelectAll("trakconnect","Machines");
+            MySqlDataReader reader = Database.SelectAll("cnc-machine-db","Machine");
 
             int idx; 
             while (reader.Read())
@@ -76,7 +76,7 @@ namespace DataGrabberApp
 
 
                 MachineInfo machine;
-                machine = new MachineInfo("http://" + IpAddress + ":" + port, Id, Protocol);
+                machine = new MachineInfo("http://" + IpAddress + ":" + port, Id, MachineName);
                 
                 machineInfoList.Add(machine);
             }
