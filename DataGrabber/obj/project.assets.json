@@ -20,7 +20,7 @@
           }
         }
       },
-      "MySqlConnector/2.1.9": {
+      "MySqlConnector/2.1.11": {
         "type": "package",
         "compile": {
           "lib/net6.0/MySqlConnector.dll": {}
@@ -194,10 +194,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "MySqlConnector/2.1.9": {
-      "sha512": "72fgNLG3qVRaVkvjQOnY4jfbs7mukrMSWfu9b4l9LRwy5EKnPybRcDuaKtNI775c8FaeWgy/wEtV408opinAGQ==",
+    "MySqlConnector/2.1.11": {
+      "sha512": "JTWIkFDz0uQhXKLjd53t2zeZn84aGuxCzRRe5NYOInuThRa6OrtdN/iEob2+GYAJeH2f4m42wdmunjT5Y02lIA==",
       "type": "package",
-      "path": "mysqlconnector/2.1.9",
+      "path": "mysqlconnector/2.1.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -219,7 +219,7 @@
         "lib/netstandard2.1/MySqlConnector.dll",
         "lib/netstandard2.1/MySqlConnector.xml",
         "logo.png",
-        "mysqlconnector.2.1.9.nupkg.sha512",
+        "mysqlconnector.2.1.11.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -425,7 +425,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "MTConnectSharp >= 1.0.0",
-      "MySqlConnector >= 2.1.9",
+      "MySqlConnector >= 2.1.11",
       "System.Configuration.ConfigurationManager >= 6.0.0"
     ]
   },
@@ -472,7 +472,7 @@
         "dependencies": {
           "MySqlConnector": {
             "target": "Package",
-            "version": "[2.1.9, )"
+            "version": "[2.1.11, )"
           },
           "System.Configuration.ConfigurationManager": {
             "target": "Package",

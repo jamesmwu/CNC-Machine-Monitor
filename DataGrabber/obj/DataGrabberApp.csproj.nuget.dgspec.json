@@ -44,7 +44,7 @@
           "dependencies": {
             "MySqlConnector": {
               "target": "Package",
-              "version": "[2.1.9, )"
+              "version": "[2.1.11, )"
             },
             "System.Configuration.ConfigurationManager": {
               "target": "Package",

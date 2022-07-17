@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "cV4ItWvFRqy1YLDuWJEiYx2oQXo0aO3CS1QHPOhDvuMU65jK4F/QJB2CxuqFUH34FQQeFQU8lQCx4LN88XOilw==",
+  "dgSpecHash": "cXat+ef6zwbIlouqSdJ8YTgCO7GDFNpFz+5xFgA/BA/7QYwlNDvwQvrt99miHI30zFrfiK0ocGW0E6CubXGe+Q==",
   "success": true,
   "projectFilePath": "/Users/jameswu/Desktop/CNCMachineMonitor/DataGrabber/DataGrabberApp.csproj",
   "expectedPackageFiles": [
     "/Users/jameswu/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "/Users/jameswu/.nuget/packages/mysqlconnector/2.1.9/mysqlconnector.2.1.9.nupkg.sha512",
+    "/Users/jameswu/.nuget/packages/mysqlconnector/2.1.11/mysqlconnector.2.1.11.nupkg.sha512",
     "/Users/jameswu/.nuget/packages/restsharp/106.3.1/restsharp.106.3.1.nupkg.sha512",
     "/Users/jameswu/.nuget/packages/system.configuration.configurationmanager/6.0.0/system.configuration.configurationmanager.6.0.0.nupkg.sha512",
     "/Users/jameswu/.nuget/packages/system.drawing.common/6.0.0/system.drawing.common.6.0.0.nupkg.sha512",

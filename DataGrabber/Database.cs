@@ -15,7 +15,7 @@ namespace DataGrabberApp
 
 			try
 			{
-				string connString = System.Configuration.ConfigurationManager.ConnectionStrings["TrakConnect"].ConnectionString;
+				string connString = System.Configuration.ConfigurationManager.ConnectionStrings["cnc-machine-db"].ConnectionString;
 
 				DBConnection = new MySqlConnection(connString);
 				DBConnection.Open();

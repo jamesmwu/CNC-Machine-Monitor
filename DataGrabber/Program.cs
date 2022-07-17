@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Linq;
-using System.Diagnostics;
-using System.ServiceProcess;
+//using System.Linq;
+//using System.Diagnostics; //This can be used to print debugging statements with debug.writeline
+//using System.ServiceProcess;
 //using Terminal.Gui;
 using System.Collections.Generic;
 using MySqlConnector;
@@ -17,7 +17,6 @@ namespace DataGrabberApp
        
         static void Main(string[] args)
         {
-
             Start(args);
             while (Console.ReadKey().Key != ConsoleKey.Escape) ;
        
@@ -59,11 +58,11 @@ namespace DataGrabberApp
             {
                 idx = 0;
                 int Id = reader.GetInt32(idx++);
-                int MachineIdKey = reader.GetInt32(idx++);
+                int MachineIdKey = reader.GetInt32(idx++);  //What is difference between MachineIDKey and ID and CellId
                 int CellId = reader.GetInt32(idx++);
                 string MachineName = reader.GetString(idx++);
                 string IpAddress = reader.GetString(idx++);
-                string MACAddress = reader.GetString(idx++);
+                string MACAddress = reader.GetString(idx++);    //Difference between MACAddress and Ipaddress?
                 string MasterVersion = reader.GetString(idx++);
                 string SlaveVersion = reader.GetString(idx++);
                 string PendantSerial = reader.GetString(idx++);
@@ -76,6 +75,7 @@ namespace DataGrabberApp
 
 
                 MachineInfo machine;
+                //Creates new machine object with URL, ID, and name
                 machine = new MachineInfo("http://" + IpAddress + ":" + port, Id, MachineName);
                 
                 machineInfoList.Add(machine);
