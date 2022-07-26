@@ -84,26 +84,28 @@ namespace DataGrabberApp
             {
                 Console.WriteLine("url = " + url + " , machine id = " + machineId + " , TimeStamp = " + time + " , datum id = " + id + " , value = " + value);
 
-                bool pushData = false;  //turn if off if don't want to push data to db
+                bool pushData = true;  //turn if off if don't want to push data to db
 
                 if (pushData)
                 {
 
-                    string connString = System.Configuration.ConfigurationManager.ConnectionStrings["TrakConnect"].ConnectionString;
+                    string connString = System.Configuration.ConfigurationManager.ConnectionStrings["cnc-machine-db"].ConnectionString;
 
                     MySqlCommand cmd = new MySqlCommand();
                     MySqlConnection DBConnection;
                     DBConnection = new MySqlConnection(connString);
                     await DBConnection.OpenAsync();
                     cmd = DBConnection.CreateCommand();
-                    cmd.CommandText = "INSERT INTO MachineTimeSeriesData (Time, BoolValue, NumberValue, TextValue, Machines_ID, DataParameters_ID)" +
-                    " VALUES(?_Time, ?_BoolValue,  ?_NumberValue, ?_TextValue, ?_Machines_ID, ?_DataParameters_ID)";
+                    cmd.CommandText = "INSERT INTO Time (StackLight, idMachine, Time)" +
+                    " VALUES(?_StackLight, ?_idMachine,  ?_Time)";
+                    cmd.Parameters.Add("?_StackLight", MySqlDbType.VarString).Value = value;
+                    cmd.Parameters.Add("?_idMachine", MySqlDbType.Int32).Value = machineId;
                     cmd.Parameters.Add("?_Time", MySqlDbType.DateTime).Value = time;
-                    cmd.Parameters.Add("?_BoolValue", MySqlDbType.Bool).Value = false;
-                    cmd.Parameters.Add("?_NumberValue", MySqlDbType.Double).Value = 0;
-                    cmd.Parameters.Add("?_TextValue", MySqlDbType.VarString).Value = DatumValue;
-                    cmd.Parameters.Add("?_Machines_ID", MySqlDbType.Int32).Value = machineId;
-                    cmd.Parameters.Add("?_DataParameters_ID", MySqlDbType.Int32).Value = 1;
+
+                    //cmd.Parameters.Add("?_BoolValue", MySqlDbType.Bool).Value = false;
+                    //cmd.Parameters.Add("?_NumberValue", MySqlDbType.Double).Value = 0;
+                    //cmd.Parameters.Add("?_TextValue", MySqlDbType.VarString).Value = DatumValue;
+                    //cmd.Parameters.Add("?_DataParameters_ID", MySqlDbType.Int32).Value = 1;
                     await cmd.ExecuteNonQueryAsync();
                 }
 

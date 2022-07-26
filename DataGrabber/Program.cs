@@ -17,6 +17,7 @@ namespace DataGrabberApp
        
         static void Main(string[] args)
         {
+            Console.WriteLine("Program Start");
             Start(args);
             while (Console.ReadKey().Key != ConsoleKey.Escape) ;
        
@@ -58,19 +59,22 @@ namespace DataGrabberApp
             {
                 idx = 0;
                 int Id = reader.GetInt32(idx++);
-                int MachineIdKey = reader.GetInt32(idx++);  //What is difference between MachineIDKey and ID and CellId
-                int CellId = reader.GetInt32(idx++);
+                //int MachineIdKey = reader.GetInt32(idx++);  //What is difference between MachineIDKey and ID and CellId
+                //int CellId = reader.GetInt32(idx++);
                 string MachineName = reader.GetString(idx++);
+                //int IpAddress = reader.GetInt32(idx++);
                 string IpAddress = reader.GetString(idx++);
-                string MACAddress = reader.GetString(idx++);    //Difference between MACAddress and Ipaddress?
-                string MasterVersion = reader.GetString(idx++);
-                string SlaveVersion = reader.GetString(idx++);
-                string PendantSerial = reader.GetString(idx++);
-                string CMSerial = reader.GetString(idx++);
-                string Protocol = reader.GetString(idx++);
-                int ConfigZipSize = reader.GetInt32(idx++);
-                byte[] ConfigZipData = new byte[ConfigZipSize];
-                reader.GetBytes(reader.GetOrdinal("ConfigZipData"), 0, ConfigZipData, 0, (Int32)ConfigZipSize);
+
+
+                //string MACAddress = reader.GetString(idx++);    //Difference between MACAddress and Ipaddress?
+                //string MasterVersion = reader.GetString(idx++);
+                //string SlaveVersion = reader.GetString(idx++);
+                //string PendantSerial = reader.GetString(idx++);
+                //string CMSerial = reader.GetString(idx++);
+                //string Protocol = reader.GetString(idx++);
+                //int ConfigZipSize = reader.GetInt32(idx++);
+                //byte[] ConfigZipData = new byte[ConfigZipSize];
+                //reader.GetBytes(reader.GetOrdinal("ConfigZipData"), 0, ConfigZipData, 0, (Int32)ConfigZipSize);
 
 
 
